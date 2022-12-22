@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.swing.text.html.HTMLDocument.HTMLReader.SpecialAction;
+
+public class repeatedcount {
+    public static int isaddition(int[] count) {
+        int sum = 0;
+        for (int i = 0; i < count.length; i++) {
+            if (count[i] > 1) {
+                sum = sum + count[i];
+            }
+
+        }
+        return sum;
+    }
+
+    public static int ismultiplication(int[] count) {
+        int sum = 1;
+        for (int i = 0; i < count.length; i++) {
+            if (count[i] > 1) {
+                sum = sum * count[i];
+            }
+        }
+
+        return sum;
+
+    }
+
+    public static void main(String[] args) {
+        String str = "acknowledgements";
+        int[] count = new int[256];
+        char[] ch = str.toCharArray();
+        for (int i = 0; i < ch.length; i++) {
+            count[(int) str.charAt(i)]++;
+        }
+
+        System.out.println(isaddition(count) + " " + ismultiplication(count));
+
+    }
+}
