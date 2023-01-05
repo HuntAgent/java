@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+import javax.swing.text.html.HTMLDocument.HTMLReader.SpecialAction;
+
+public class wrongindcies {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        String str1 = sc.nextLine();
+        char[] ch = str.toCharArray();
+        char[] ch1 = str1.toCharArray();
+        
+
+        if (str.length() != str1.length()) {
+            System.out.println("cannot possible");
+        } else {
+            for (int i = 0; i < ch.length; i++) {
+                for (int j = 0; j < ch1.length; j++) {
+                    if (ch[i] != ch1[j] && i == j) {
+                        System.out.print(ch1[j]);
+                    }
+                }
+
+            }
+
+        }
+        sc.close();
+    }
+}
